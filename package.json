@@ -1,0 +1,67 @@
+{
+  "name": "el-fuzzy-select",
+  "version": "1.0.0",
+  "description": "A fuzzy search component based on element-ui and fuse.js",
+  "main": "dist/index.umd.min.js",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:lib": "vue-cli-service build --mode library --target lib --formats umd-min --name index ./lib/index.js",
+    "build:example": "vue-cli-service build --mode example",
+    "build": "npm run build:lib && npm run build:example",
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build:lib && npm run build:example && npm publish"
+  },
+  "files": [
+    "README.md",
+    "src",
+    "dist/*.js",
+    "types/*.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zh-rocco/el-fuzzy-select.git"
+  },
+  "keywords": [
+    "fuzzy select component",
+    "element-ui",
+    "fuse.js",
+    "vue"
+  ],
+  "author": {
+    "name": "Rocco Mormont",
+    "email": "rocco.mormont@gmail.com",
+    "url": "https://zh-rocco.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/zh-rocco/el-fuzzy-select/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "element-ui": "^2.4.11",
+    "fuse.js": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-service": "^3.2.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "jest": {
+    "clearMocks": true,
+    "testURL": "http://localhost",
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "verbose": true
+  }
+}
