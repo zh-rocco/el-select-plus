@@ -2,6 +2,7 @@
   <a class="star"
      :href="url"
      target="_blank"
+     rel="nofollow me noopener noreferrer"
      title="Github">
     <svg height="32"
          class="icon-github"

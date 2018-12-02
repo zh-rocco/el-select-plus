@@ -1,9 +1,8 @@
 const { name } = require('./package.json');
-const BUILD_TYPE = process.env.BUILD_TYPE;
 
 module.exports = {
-  baseUrl: BUILD_TYPE === 'example' ? `/${name}/` : './',
-  outputDir: BUILD_TYPE === 'library' ? 'dist' : 'docs',
+  baseUrl: `/${name}/`,
+  outputDir: 'docs',
   productionSourceMap: false,
   pages: {
     index: {

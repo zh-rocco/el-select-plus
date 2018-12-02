@@ -82,7 +82,7 @@ export default {
   },
 
   methods: {
-    handleVisibleChange(value) {
+    handleVisibleChange() {
       if (!this.localValue) {
         this.filteredList = this.fullList;
       }

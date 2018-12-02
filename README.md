@@ -9,32 +9,9 @@
 ## Requirements
 
 - [`Vue.js 2.x`](https://cn.vuejs.org/)
-
-## Installation
-
-```bash
-yarn add el-fuzzy-select
-```
+- [`ElementUI`](http://element-cn.eleme.io/)
 
 ## Usage
-
-### Registration
-
-main.js
-
-```javascript
-import Vue from 'vue';
-import App from './App.vue';
-import FuzzySelect from 'el-fuzzy-select';
-
-Vue.use(FuzzySelect);
-
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
-```
-
-### Example
 
 ```vue
 <template>
@@ -84,12 +61,6 @@ export default {
 
 ```bash
 yarn serve
-```
-
-## Build
-
-```bash
-yarn build:lib
 ```
 
 ## License

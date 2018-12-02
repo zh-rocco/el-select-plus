@@ -2,25 +2,35 @@
   <el-container id="app">
     <el-header height="auto">
       <h1 class="header">
-        <span>el-fuzzy-select</span>
+        <div>
+          支持多字段模糊搜索的
+          <a class="link"
+             href="http://element-cn.eleme.io/#/zh-CN/component/select"
+             rel="nofollow me noopener noreferrer"
+             target="_blank"
+             title="element-ui">el-select</a>
+        </div>
         <github-icon url="https://github.com/zh-rocco/el-fuzzy-select"></github-icon>
       </h1>
     </el-header>
 
     <el-main>
-      <el-fuzzy-select v-model="model"
-                       :full-list="characters"
-                       :fuzzy-options="fuzzyOptions"
-                       @change="handleChange"
-                       size="small"
-                       clearable>
-        <template slot-scope="{ filtered }">
-          <el-option v-for="character in filtered"
-                     :key="character.value"
-                     :label="character.label"
-                     :value="character.value"></el-option>
-        </template>
-      </el-fuzzy-select>
+      <div class="center">
+        <el-fuzzy-select v-model="model"
+                         :full-list="characters"
+                         :fuzzy-options="fuzzyOptions"
+                         @change="handleChange"
+                         placeholder="尝试输入：卫庄/weizhuang"
+                         size="small"
+                         clearable>
+          <template slot-scope="{ filtered }">
+            <el-option v-for="character in filtered"
+                       :key="character.value"
+                       :label="character.label"
+                       :value="character.value"></el-option>
+          </template>
+        </el-fuzzy-select>
+      </div>
     </el-main>
   </el-container>
 </template>
@@ -81,5 +91,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.link {
+  color: #409eff;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 </style>

@@ -1,0 +1,8 @@
+node_modules
+
+dist/*.js
+docs/*.js
+scripts/*.js
+
+.eslintrc.js
+.postcssrc.js
